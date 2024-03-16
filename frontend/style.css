@@ -17,9 +17,18 @@ body {
     height: 100vh;
     position: relative;
 }
+.left i{
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    z-index: 10;
+    font-size: 25px;
+}
 .left img{
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    left: 5%;
+    width: 95%;
+    height: 95%;
     object-fit: fill;
     object-position: 50% 50%;
 }
@@ -33,10 +42,12 @@ body {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    background-color: rgba(85, 54, 196, 0.4);
+    /* background-color: rgba(85, 54, 196, 0.8); */
+    background-color: rgb(34, 35, 59,0.8);
+    right: 5%;
 }
 .elem h1{
-    color: white;
+    color: rgb(255, 255, 255, 0.9);
     font-size: 60px;
 }
 .elem span{
@@ -46,11 +57,11 @@ body {
 .elem p{
     width: 70%;
     padding: 0 35px;
-    color: white;
+    color: rgb(255, 255, 255, 0.7);
     font-size: 20px;
     font-weight: 100;
     text-align: center;
-    line-height: 28px;    
+    line-height: 28px;
 }
 .right{
     width: 50vw;
@@ -58,57 +69,68 @@ body {
     display: flex;
     flex-direction: column;
 }
-.right .container button{
-    width: 10%;
-    border: 2px solid purple;
-    color: purple;
-    top: 220px;
-    right: 0px;
+.right .container a button{
+    position: absolute;
+    top: 60px;
+    right: 120px;
+    width: fit-content;
+    padding: 10px 35px;
+    border: 3px solid #3F27D7;
+    color: #3F27D7;
     cursor: pointer;
+    border-radius: 5px;
+    letter-spacing: 1.2px;
+    background-color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 13px;
 }
 .right .container {
     width: 50vw;
     height: 100vh;
-    padding: 200px;
+    padding: 200px 100px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
 }
 .right .container h1 {
     padding-bottom: 20px;
-    color: purple;
+    color: #3F27D7;
     font-size: 43px;
 }
 .right .container p{
     padding-bottom: 40px;
-    color: purple;
+    color: #3F27D7;
     font-size: 15px;
     font-weight: 800;
 }
-#firstName , #lastName{
-    width: 45% !important;
-    flex-wrap: wrap;
+.right .container .name{
+    display: flex;
+    gap: 30px;
+    width: calc(100% - 20px);
 }
-input[type="text"],
-input[type="email"],
-input[type="password"] {
+input{
     width: calc(100% - 20px);
     margin-bottom: 30px;
-    padding: 10px;
+    padding: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
 #registrationForm button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
+    width: calc(100% - 20px);
+    padding: 18px;
+    background-color: #3F27D7;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-top: 20px;
 }
 
 #registrationForm button:hover {
-    background-color: #0056b3;
+    background-color: rgb(63, 39, 215, 0.9);
 }

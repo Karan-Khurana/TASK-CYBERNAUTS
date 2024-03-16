@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 </head>
 <body>
     <div class="left">
-        <img src="./Screenshot 2024-03-16 133823.png" alt="airplane ">
+        <i class="fa-solid fa-plane fa-flip-horizontal fa-lg" style="color: rgb(255, 255, 255, 0.8);"></i>
+        <img src="./bfc53f55083bddde359b9e308ca7757c.jpeg" alt="airplane ">
         <div class="elem">
             <h1>Altitude Air</h1>
             <span></span>
@@ -17,12 +19,14 @@
     </div>
     <div class="right">
         <div class="container">
-            <button>SIGN IN</button>
+            <a href="/frontend/login.html"><button>SIGN IN</button></a>
             <h1>Explore & Experience</h1>
             <p>Get onto your most comfortable journey yet. All the way up.</p>
             <form id="registrationForm">
-                <input type="text" id="firstName" placeholder="First Name" required>
-                <input type="text" id="lastName" placeholder="Last Name" required>
+                <div class="name">
+                    <input type="text" id="firstName" placeholder="First Name" required>
+                    <input type="text" id="lastName" placeholder="Last Name" required>
+                </div>
                 <input type="email" id="email" placeholder="Email" required>
                 <input type="text" id="username" placeholder="Username" required>
                 <input type="password" id="password" placeholder="Password" required>
