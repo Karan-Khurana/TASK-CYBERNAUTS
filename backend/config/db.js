@@ -5,16 +5,20 @@ const db = mysql.createConnection({
   host: process.env.DBHOST,
   user: process.env.DBUSER,
   password: process.env.DBPASSWORD,
+  database: process.env.DATABASE,
 });
 
 const conn = () => {
   try {
     db.connect();
-    db.query("CREATE DATABASE IF NOT EXISTS CYBERNAUTS", (error, results) => {
-      if (error) throw error;
-      return results;
-    });
-    db.query("USE CYBERNAUTS", (error, results) => {
+    db.query(
+      `CREATE DATABASE IF NOT EXISTS ${process.env.DATABASE}`,
+      (error, results) => {
+        if (error) throw error;
+        return results;
+      }
+    );
+    db.query(`USE ${process.env.DATABASE}`, (error, results) => {
       if (error) throw error;
       return results;
     });
