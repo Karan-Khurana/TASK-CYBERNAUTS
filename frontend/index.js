@@ -26,7 +26,7 @@ const register = async (event) => {
     };
   
     try {
-      const response = await fetch("http://127.0.0.1:5000/api/user/", {
+      const response = await fetch("https://task-cybernauts.vercel.app/api/user/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -63,7 +63,7 @@ const register = async (event) => {
     };
   
     try {
-      const response = await fetch("http://127.0.0.1:5000/api/user/login", {
+      const response = await fetch("https://task-cybernauts.vercel.app/api/user/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
